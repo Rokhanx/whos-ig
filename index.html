@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <title>Who's ig</title>
+</head>
+<body>
+    <div class="upload-container">
+        <label for="file-upload" class="upload-label">Subir archivo</label>
+        <input type="file" id="file-upload" accept=".zip">
+
+        <button id="open-modal-btn">Ver Tutorial</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tutorial</h2>
+                <span id="close-modal-btn" class="close-btn">&times;</span> <!-- X to close the modal -->
+            </div>
+            <hr>
+            <div class="modal-body">
+                <div class="page-content" id="page-content"></div>
+                <div class="page-indicators">
+                    <div class="page-indicator active"></div>
+                    <div class="page-indicator"></div>
+                    <div class="page-indicator"></div>
+                    <div class="page-indicator"></div>
+                    <div class="page-indicator"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="modal-footer">
+                <button id="prev-btn" disabled>Página Anterior</button>
+                <button id="next-btn">Página Siguiente</button>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="panel" id="panel-followers">
+            <div class="panel-header">
+                <h2>Seguidores</h2>
+                <input type="text" id="search-followers" placeholder="Buscar..." class="search-input">
+            </div>
+            <hr>
+            <div class="panel-content">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="panel" id="panel-following">
+            <div class="panel-header">
+                <h2>Seguidos</h2>
+                <input type="text" id="search-following" placeholder="Buscar..." class="search-input">
+            </div>
+            <hr>
+            <div class="panel-content">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="panel" id="panel-not-following-back">
+            <div class="panel-header">
+                <h2>Seguidos que no te siguen</h2>
+                <input type="text" id="search-not-following-back" placeholder="Buscar..." class="search-input">
+            </div>
+            <hr>
+            <div class="panel-content">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="panel" id="panel-following-back">
+            <div class="panel-header">
+                <h2>Seguidores que te siguen</h2>
+                <input type="text" id="search-following-back" placeholder="Buscar..." class="search-input">
+            </div>
+            <hr>
+            <div class="panel-content">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
